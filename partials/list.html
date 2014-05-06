@@ -1,0 +1,14 @@
+<section class="flickr">
+<h1>Flickr Public Feed</h1>
+  <div ng-controller = "ListController">
+    <ul class="results">
+      <li class="result" ng-repeat="item in data">
+          <img ng-src="{{item.media.m}}" alt="{{item.title}}" />
+          <h2 class="title"><a class="title_link" href="#/details/{{data.indexOf(item)}}">{{item.title}}</a></h2>
+          <p class="date">Published: {{item.published | date :"dd MMM yyyy 'at' HH:mm"}}</p>
+          <a class="author" href="https://www.flickr.com/photos/{{item.author_id}}">{{item.author}}</a>
+          <a class="flickrView" href="{{item.link}}">View on Flickr</a>
+      </li>
+    </ul>
+  </div>
+</section>
