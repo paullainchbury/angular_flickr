@@ -2,7 +2,8 @@
 <p><a class="author" href="https://www.flickr.com/photos/{{photo.author_id}}">{{photo.author | userName }}</a> | Published: {{photo.published | date :"dd MMM yyyy 'at' HH:mm"}}</p>
 <img ng-src="{{photo.media.m}}" alt="{{photo.title}}" />
 <p class="description" ng-bind-html="description"></p>
-<p>Tags: </p>
-Back Button
+Tags:
+<span class="tags" ng-repeat="tag in tags">{{tag + " "}}</span>
+<div>Back Button</div>
 
 

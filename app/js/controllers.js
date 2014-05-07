@@ -21,7 +21,10 @@ angular.module('FlickrApp.controllers', []).
     var newString = $scope.description.split(re);
     newString.splice(0, 2);
     $scope.description = newString.join();
-    console.log($scope.description);
+    // Split up the tags string
+    var tags = $scope.photo.tags.split(' ');
+    $scope.tags = tags;
+    console.log($scope.tags);
   }).
     controller('parentCtrl', function($scope, flickrAPIservice) {
       $scope.photosList = [];
@@ -30,4 +33,6 @@ angular.module('FlickrApp.controllers', []).
           $scope.photosList = response.items;
       });
   });
+
+
 
