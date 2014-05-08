@@ -3,7 +3,10 @@
 <img ng-src="{{photo.media.m}}" alt="{{photo.title}}" />
 <p class="description" ng-bind-html="description"></p>
 Tags:
-<span class="tags" ng-repeat="tag in tags">{{tag + " "}}</span>
+<span class="tag" ng-repeat="tag in tags"><a class="tagLink" href="https://www.flickr.com/search/?text={{tag}}&sort=relevance">{{tag}}</a>&nbsp;&nbsp;</span>
 <div>Back Button</div>
+
+
+
 
 
