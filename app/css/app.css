@@ -28,3 +28,16 @@
   content: "";
   padding: 0;
 }
+
+.flickr-image {
+  overflow:hidden;
+  text-align:center;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}

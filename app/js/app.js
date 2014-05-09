@@ -15,7 +15,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
 
-
 angular.module('FlickrApp', [
   'FlickrApp.controllers',
   'FlickrApp.services',
@@ -28,4 +27,7 @@ config(['$routeProvider', function($routeProvider) {
   when("/photos", {templateUrl: "partials/photos.html", controller: "listController"}).
   when("/photos/:id", {templateUrl: "partials/photo.html", controller: "photoController"}).
   otherwise({redirectTo: '/photos'});
+
 }]);
+
+

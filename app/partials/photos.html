@@ -1,14 +1,17 @@
-<table>
-  <thead>
-    <tr><th colspan="5">A list of photos</th></tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="item in photosList">
-      <td><img ng-src="{{item.media.m}}" alt="{{item.title}}" /></td>
-      <td><a class="title_link" href="#/photos/{{photosList.indexOf(item)}}">{{item.title}}</a></td>
-      <td>Published: {{item.published | date :"dd MMM yyyy 'at' HH:mm"}}</td>
-      <td><a class="author" href="https://www.flickr.com/photos/{{item.author_id}}">{{item.author | userName}}</a></td>
-      <td><a class="flickrView" href="{{item.link}}">View on Flickr</a></td>
-    </tr>
-  </tbody>
-</table>
+<h1>Flickr Public Feed</h1>
+
+<div ng-repeat="item in photosList">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3 flickr-image"><img ng-src="{{item.media.m}}" alt="{{item.title}}"></div>
+    <div class="col-xs-12 col-sm-9">
+      <div class="row">
+        <div class="col-xs-12"><h3><a class="title_link" href="#/photos/{{photosList.indexOf(item)}}">{{item.title}}</a></h3></div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-3"><a class="author" href="https://www.flickr.com/photos/{{item.author_id}}">{{item.author | userName}}</a></div>
+        <div class="col-xs-12 col-sm-4">Published: {{item.published | date :"dd MMM yyyy 'at' HH:mm"}}</div>
+        <div class="col-xs-12 col-sm-5"><a class="flickrView" href="{{item.link}}">View on Flickr</a></div>
+      </div>
+    </div>
+  </div>
+</div>
